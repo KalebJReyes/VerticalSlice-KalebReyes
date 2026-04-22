@@ -11,3 +11,4 @@ Milestone 4 Devlog goes here.
 Final Devlog goes here.
 ## Open-source assets
 - [Table Surface Stock Image](https://unsplash.com/photos/a-close-up-of-a-wood-grain-surface-RiwLW247fpU) - Table surface photo
+- [Wood Wall Stock Image](https://unsplash.com/photos/close-up-photo-of-wooden-panel-1Bg9Wlq3wXk) - Wall background photo
