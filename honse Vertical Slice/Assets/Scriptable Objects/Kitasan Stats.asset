@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90d56a326f0442048b44c32de59a7b9d, type: 3}
-  m_Name: HorseStats 2
+  m_Name: Kitasan Stats
   m_EditorClassIdentifier: 
   Real: 1
   idName: Kitasan Black
@@ -22,6 +22,11 @@ MonoBehaviour:
   fcName: Kitasan Black
   fcDob: March 10, 2012
   fcPhoto: {fileID: 21300000, guid: d83f8992828187e4a9046da66e6b8a5b, type: 3}
-  stableSignature: {fileID: 0}
+  stableSignature: {fileID: 21300000, guid: 1e8f19f7534cffb4dbd1dda798d7a2f2, type: 3}
   fcIdnum: 647829KB743
-  Funds: 11768660
+  Funds: 9999999
+  giveFunds: 0
+  Honse: {fileID: 21300000, guid: 5a48dcb29c92fab4497034c6493b0f5a, type: 3}
+  honseCoatCol: Bay
+  honseManeCol: Black
+  honsePattern: White Blaze

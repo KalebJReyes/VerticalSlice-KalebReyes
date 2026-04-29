@@ -22,4 +22,11 @@ public class horseStats : ScriptableObject
     public Sprite stableSignature;
     public string fcIdnum;
     public float Funds;
+    public bool giveFunds;
+
+    // Real Horse Values
+    public Sprite Honse;
+    public string honseCoatCol;
+    public string honseManeCol;
+    public string honsePattern;
 }
