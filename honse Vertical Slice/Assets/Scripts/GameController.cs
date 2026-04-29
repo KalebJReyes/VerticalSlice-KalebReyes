@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -10,6 +12,12 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject _fcPrefab;
     [SerializeField] private SpriteRenderer _horseSpawn;
     [SerializeField] private horseStats[] _horseStatsList;
+    [SerializeField] private GameObject _denyBox;
+    //[SerializeField] private Toggle[] _reasonToggles;
+    [SerializeField] private TMP_Text _acceptedRealtxt;
+    [SerializeField] private TMP_Text _acceptedFaketxt;
+    [SerializeField] private TMP_Text _rejectedRealtxt;
+    [SerializeField] private TMP_Text _rejectedFaketxt;
 
     public horseStats _chosenHorse;
     private horseStats _currentHorse;
@@ -40,10 +48,12 @@ public class GameController : MonoBehaviour
         if (_chosenHorse.Real)
         {
             _acceptedReal++;
+            _acceptedRealtxt.text = "Real Accepted: " + _acceptedReal;
         }
         else 
         {
             _acceptedFake++;
+            _acceptedFaketxt.text = "Fake Accepted: " + _acceptedFake;
         }
 
         Destroy(_currentID);
@@ -55,20 +65,45 @@ public class GameController : MonoBehaviour
 
     public void Deny() 
     {
+        _denyBox.SetActive(true);
+    }
+
+    public void DenyConfirm() 
+    {
         if (!_chosenHorse.Real)
         {
             _rejectedFake++;
+            _rejectedFaketxt.text = "Fake Rejected: " + _rejectedFake;
         }
         else
         {
             _rejectedReal++;
+            _rejectedRealtxt.text = "Real Rejected: " + _rejectedReal;
         }
+/*
+        for (int i = 0; i < _reasonToggles.Length; i++)
+        {
+            _reasonToggles[i].isOn = false;
+        }
+*/
+        _denyBox.SetActive(false);
 
         Destroy(_currentID);
         Destroy(_currentFC);
 
         ChooseHorse();
         SpawnHorse();
+    }
+
+    public void CancelDeny() 
+    {
+        /*
+        for (int i = 0; i < _reasonToggles.Length; i++)
+        {
+            _reasonToggles[i].isOn = false;
+        }
+        */
+        _denyBox.SetActive(false);
     }
 
     private void ChooseHorse()
