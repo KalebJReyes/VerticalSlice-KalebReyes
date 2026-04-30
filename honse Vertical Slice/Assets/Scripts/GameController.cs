@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -39,6 +40,10 @@ public class GameController : MonoBehaviour
     public void SpawnHorse() 
     {
         _horseSpawn.sprite = _chosenHorse.Honse;
+    }
+
+    public void SpawnHorseItems() 
+    {
         _currentID = Instantiate(_idSpawnPrefab, _idSpawn.position, Quaternion.identity);
         _currentFC = Instantiate(_fcPrefab, _fcSpawn.position, Quaternion.identity);
     }
@@ -56,11 +61,12 @@ public class GameController : MonoBehaviour
             _acceptedFaketxt.text = "Fake Accepted: " + _acceptedFake;
         }
 
+        EventBus.Trigger(EventNames.AcceptHorse, this);
+
         Destroy(_currentID);
         Destroy(_currentFC);
 
         ChooseHorse();
-        SpawnHorse();
     }
 
     public void Deny() 
@@ -91,8 +97,9 @@ public class GameController : MonoBehaviour
         Destroy(_currentID);
         Destroy(_currentFC);
 
+        EventBus.Trigger(EventNames.DenyHorse, this);
+
         ChooseHorse();
-        SpawnHorse();
     }
 
     public void CancelDeny() 
