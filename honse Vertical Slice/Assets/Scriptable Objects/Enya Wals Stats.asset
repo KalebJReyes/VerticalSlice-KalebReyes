@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Enya Wals Stats
   m_EditorClassIdentifier: 
   Real: 1
+  fakeReason: None
   idName: Enya Wals
   idPhoto: {fileID: 21300000, guid: f0cfc4e2cbbc0624e929b9741330dd19, type: 3}
   idDOB: October 18, 2020
@@ -27,6 +28,3 @@ MonoBehaviour:
   Funds: 893877
   giveFunds: 0
   Honse: {fileID: 21300000, guid: 3d1aa912a9210fc4ca74617009c50e92, type: 3}
-  honseCoatCol: Light Grey
-  honseManeCol: White
-  honsePattern: Snip

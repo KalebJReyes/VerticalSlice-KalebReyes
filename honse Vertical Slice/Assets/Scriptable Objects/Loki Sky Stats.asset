@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Loki Sky Stats
   m_EditorClassIdentifier: 
   Real: 0
+  fakeReason: Names don't match
   idName: Loki Sky
   idPhoto: {fileID: 21300000, guid: 91e0bfbf7b02ee34cb069ad84460fa2a, type: 3}
   idDOB: January 17, 2014
@@ -27,6 +28,3 @@ MonoBehaviour:
   Funds: 740819
   giveFunds: 0
   Honse: {fileID: 21300000, guid: b747e26a6bc50444685d0b7be12fe080, type: 3}
-  honseCoatCol: Chestnut
-  honseManeCol: Black
-  honsePattern: Star

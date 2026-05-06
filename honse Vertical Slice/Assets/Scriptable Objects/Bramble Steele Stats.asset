@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Bramble Steele Stats
   m_EditorClassIdentifier: 
   Real: 0
+  fakeReason: Horse is different from photo
   idName: Bramble Steele
   idPhoto: {fileID: 21300000, guid: 9b378f0ca05020d44970b6cab65ea8be, type: 3}
   idDOB: June 18, 2017
@@ -27,6 +28,3 @@ MonoBehaviour:
   Funds: 708568
   giveFunds: 0
   Honse: {fileID: 21300000, guid: 712591c64d019f4489e44f7ed19dd90c, type: 3}
-  honseCoatCol: White & Grey
-  honseManeCol: Grey
-  honsePattern: Grey star & patches

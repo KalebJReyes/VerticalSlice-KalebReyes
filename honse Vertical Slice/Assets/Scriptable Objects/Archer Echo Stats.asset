@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Archer Echo Stats
   m_EditorClassIdentifier: 
   Real: 0
+  fakeReason: DOB doesn't match
   idName: Archer Echo
   idPhoto: {fileID: 21300000, guid: 44bc81e2c41b36547b887cb838262ba5, type: 3}
   idDOB: March 22, 2019
@@ -27,6 +28,3 @@ MonoBehaviour:
   Funds: 119417
   giveFunds: 0
   Honse: {fileID: 21300000, guid: ca94ce4445a992248affa38f1ccdbf7f, type: 3}
-  honseCoatCol: White
-  honseManeCol: White
-  honsePattern: None

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: King Glory Stats
   m_EditorClassIdentifier: 
   Real: 1
+  fakeReason: None
   idName: King Glory
   idPhoto: {fileID: 21300000, guid: 09a5f126177007c4cbaaae22685a9e66, type: 3}
   idDOB: April 11, 2016
@@ -27,6 +28,3 @@ MonoBehaviour:
   Funds: 695635
   giveFunds: 0
   Honse: {fileID: 21300000, guid: a23e3f84a7e4a544bbb269ea1781ece9, type: 3}
-  honseCoatCol: Black
-  honseManeCol: Black
-  honsePattern: White Patches
