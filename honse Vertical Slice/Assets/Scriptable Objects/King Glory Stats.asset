@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90d56a326f0442048b44c32de59a7b9d, type: 3}
-  m_Name: Kitasan Stats
+  m_Name: King Glory Stats
   m_EditorClassIdentifier: 
   Real: 1
-  idName: Kitasan Black
-  idPhoto: {fileID: 21300000, guid: d83f8992828187e4a9046da66e6b8a5b, type: 3}
-  idDOB: March 10, 2012
-  idCoatCol: Bay
+  idName: King Glory
+  idPhoto: {fileID: 21300000, guid: 09a5f126177007c4cbaaae22685a9e66, type: 3}
+  idDOB: April 11, 2016
+  idCoatCol: Black
   idManeCol: Black
-  idPattern: White Blaze
-  fcName: Kitasan Black
-  fcDob: March 10, 2012
-  fcPhoto: {fileID: 21300000, guid: d83f8992828187e4a9046da66e6b8a5b, type: 3}
+  idPattern: White Patches
+  fcName: King Glory
+  fcDob: April 11, 2016
+  fcPhoto: {fileID: 21300000, guid: 09a5f126177007c4cbaaae22685a9e66, type: 3}
   stableSignature: {fileID: 21300000, guid: 1e8f19f7534cffb4dbd1dda798d7a2f2, type: 3}
-  fcIdnum: 647829KB743
-  Funds: 9999999
+  fcIdnum: 041116KG748
+  Funds: 695635
   giveFunds: 0
-  Honse: {fileID: 21300000, guid: 5a48dcb29c92fab4497034c6493b0f5a, type: 3}
-  honseCoatCol: Bay
+  Honse: {fileID: 21300000, guid: a23e3f84a7e4a544bbb269ea1781ece9, type: 3}
+  honseCoatCol: Black
   honseManeCol: Black
-  honsePattern: White Blaze
+  honsePattern: White Patches

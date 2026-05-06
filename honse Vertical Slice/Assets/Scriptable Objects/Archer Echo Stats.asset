@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90d56a326f0442048b44c32de59a7b9d, type: 3}
-  m_Name: Gold Ship Stats
+  m_Name: Archer Echo Stats
   m_EditorClassIdentifier: 
-  Real: 1
-  idName: Gold Ship
-  idPhoto: {fileID: 21300000, guid: 5d107788a6a731d4a8d6ce03cdc86c17, type: 3}
-  idDOB: March 6, 2009
-  idCoatCol: Grey
+  Real: 0
+  idName: Archer Echo
+  idPhoto: {fileID: 21300000, guid: 44bc81e2c41b36547b887cb838262ba5, type: 3}
+  idDOB: March 22, 2019
+  idCoatCol: White
   idManeCol: White
   idPattern: None
-  fcName: Gold Ship
-  fcDob: March 6, 2009
-  fcPhoto: {fileID: 21300000, guid: 5d107788a6a731d4a8d6ce03cdc86c17, type: 3}
+  fcName: Archer Echo
+  fcDob: March 22, 2016
+  fcPhoto: {fileID: 21300000, guid: 44bc81e2c41b36547b887cb838262ba5, type: 3}
   stableSignature: {fileID: 21300000, guid: 1e8f19f7534cffb4dbd1dda798d7a2f2, type: 3}
-  fcIdnum: 932864GS395
-  Funds: 8818440
+  fcIdnum: 032216AE937
+  Funds: 119417
   giveFunds: 0
-  Honse: {fileID: 21300000, guid: 16fe01b0e3668de4fabeb3156f895d4d, type: 3}
-  honseCoatCol: Grey
+  Honse: {fileID: 21300000, guid: ca94ce4445a992248affa38f1ccdbf7f, type: 3}
+  honseCoatCol: White
   honseManeCol: White
   honsePattern: None

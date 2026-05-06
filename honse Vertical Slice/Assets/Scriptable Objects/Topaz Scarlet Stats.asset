@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d56a326f0442048b44c32de59a7b9d, type: 3}
+  m_Name: Topaz Scarlet Stats
+  m_EditorClassIdentifier: 
+  Real: 1
+  idName: Topaz Scarlet
+  idPhoto: {fileID: 21300000, guid: a36cc749c290b694a95eb8a1a218d712, type: 3}
+  idDOB: August 19, 2019
+  idCoatCol: Brown
+  idManeCol: Apricot
+  idPattern: White Blaze
+  fcName: Topaz Scarlet
+  fcDob: August 19, 2019
+  fcPhoto: {fileID: 21300000, guid: a36cc749c290b694a95eb8a1a218d712, type: 3}
+  stableSignature: {fileID: 21300000, guid: 1e8f19f7534cffb4dbd1dda798d7a2f2, type: 3}
+  fcIdnum: 081919TS376
+  Funds: 773977
+  giveFunds: 0
+  Honse: {fileID: 21300000, guid: 0f59899155bb5a14dbfea9b085ae93f9, type: 3}
+  honseCoatCol: Brown
+  honseManeCol: Apricot
+  honsePattern: White Blaze

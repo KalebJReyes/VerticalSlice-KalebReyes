@@ -799,7 +799,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 911955582}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: CancelDeny
+        m_MethodName: ClearDeny
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2485,6 +2485,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3793c62d2060b6144b37c0db8599ce36, type: 2}
   - {fileID: 11400000, guid: 9a95762475c53b141a9c277f23333805, type: 2}
   - {fileID: 11400000, guid: 380c7a4d370b487488a9e5a932526a7b, type: 2}
+  - {fileID: 11400000, guid: b50dc8d7bcd46d4448306baaf16c7491, type: 2}
+  - {fileID: 11400000, guid: 65865adf6c48dd745a8cd85ac052a38b, type: 2}
+  - {fileID: 11400000, guid: 88b2fd5a63b268a43b11a64a3ff58da5, type: 2}
   _denyBox: {fileID: 585316576}
   _acceptedRealtxt: {fileID: 1708535164}
   _acceptedFaketxt: {fileID: 420227016}
