@@ -102,6 +102,29 @@ public class GameController : MonoBehaviour
             _rejectedRealtxt.text = "Real Rejected: " + _rejectedReal;
         }
 
+        foreach (Toggle item in _reasonToggles)
+        {
+            if (item.isOn) 
+            {
+                _denyReasons.Add(item);
+            }
+        }
+
+        foreach (Toggle item in _denyReasons) 
+        {
+            Transform itemTransform = item.GetComponent<Transform>();
+            Transform labelObject = itemTransform.GetChild(1);
+            Text labelText = labelObject.GetComponent<Text>();
+            string reason = labelText.text;
+
+            if (reason == _currentHorse.fakeReason) 
+            {
+                _correctReason++;
+                _correctReasoningtxt.text = "Correct Reasoning: " + _correctReason;
+            }
+        }
+
+        _denyReasons.Clear();
         ClearDeny();
 
         Destroy(_currentID);
