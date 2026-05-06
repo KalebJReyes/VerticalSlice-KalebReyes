@@ -6,6 +6,7 @@ using UnityEngine;
 public class horseStats : ScriptableObject
 {
     public bool Real;
+    public string fakeReason;
 
     // ID Values
     public string idName;
@@ -26,7 +27,9 @@ public class horseStats : ScriptableObject
 
     // Real Horse Values
     public Sprite Honse;
+    /*
     public string honseCoatCol;
     public string honseManeCol;
     public string honsePattern;
+    */
 }

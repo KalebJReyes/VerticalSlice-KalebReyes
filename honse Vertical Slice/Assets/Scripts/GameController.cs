@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private TMP_Text _acceptedFaketxt;
     [SerializeField] private TMP_Text _rejectedRealtxt;
     [SerializeField] private TMP_Text _rejectedFaketxt;
+    [SerializeField] private TMP_Text _correctReasoningtxt;
 
     public horseStats _chosenHorse;
     private horseStats _currentHorse;
@@ -30,8 +31,10 @@ public class GameController : MonoBehaviour
     private int _rejectedReal;
     private int _acceptedFake;
     private int _rejectedFake;
+    private int _correctReason;
     
     private List<Toggle> _reasonToggles = new List<Toggle>();
+    private List<Toggle> _denyReasons = new List<Toggle>();
 
     private void Start()
     {
