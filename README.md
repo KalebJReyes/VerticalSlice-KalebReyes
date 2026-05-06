@@ -26,4 +26,8 @@ Final Devlog goes here.
 - [Wood Wall Stock Image](https://unsplash.com/photos/close-up-photo-of-wooden-panel-1Bg9Wlq3wXk) - Wall background photo
 - [Desk Stock Image](https://unsplash.com/photos/gray-balanced-arm-lamp-on-brown-wooden-table-3A4XZUopCJA) - Desk photo
 - [Horse Stock Image 1](https://unsplash.com/photos/brown-horse-with-silver-round-pendant-necklace-Olt577JtPM0) - Loki Sky's photo
-- other two horses are placeholders and won't be in the final submission
+- [Horse Stock Image 2](https://unsplash.com/photos/brown-horse-with-white-hair-WWcFgaG6ZOo) - Enya Wals photo
+- [Horse Stock Image 3](https://unsplash.com/photos/bokeh-photography-of-a-black-horse-6OdJ4qIwL0s) - King Glory's photo
+- [Horse Stock Image 4](https://unsplash.com/photos/white-horse-standing-near-plant-RoTyXO1m0wo) - Archer Echo's photo
+- [Horse Stock Image 5](https://unsplash.com/photos/close-up-photography-of-white-and-gray-horse-standing-on-green-grass-field--Ylz_tc8NOk) - Bramble Steele's photo
+- [Horse Stock Image 6](https://unsplash.com/photos/brown-and-white-horse-0F9oVQ3x2ak) - Topaz Scarlet's photo
