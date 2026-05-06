@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private SpriteRenderer _horseSpawn;
     [SerializeField] private horseStats[] _horseStatsList;
     [SerializeField] private GameObject _denyBox;
-    //[SerializeField] private Toggle[] _reasonToggles;
+    
     [SerializeField] private TMP_Text _acceptedRealtxt;
     [SerializeField] private TMP_Text _acceptedFaketxt;
     [SerializeField] private TMP_Text _rejectedRealtxt;
@@ -30,6 +30,8 @@ public class GameController : MonoBehaviour
     private int _rejectedReal;
     private int _acceptedFake;
     private int _rejectedFake;
+    
+    private List<Toggle> _reasonToggles = new List<Toggle>();
 
     private void Start()
     {
@@ -72,6 +74,16 @@ public class GameController : MonoBehaviour
     public void Deny() 
     {
         _denyBox.SetActive(true);
+
+        foreach (Transform item in _denyBox.transform)
+        {
+            Toggle itemToggle = item.GetComponent<Toggle>();
+
+            if (itemToggle != null) 
+            {
+                _reasonToggles.Add(itemToggle);
+            }
+        }
     }
 
     public void DenyConfirm() 
@@ -86,13 +98,8 @@ public class GameController : MonoBehaviour
             _rejectedReal++;
             _rejectedRealtxt.text = "Real Rejected: " + _rejectedReal;
         }
-/*
-        for (int i = 0; i < _reasonToggles.Length; i++)
-        {
-            _reasonToggles[i].isOn = false;
-        }
-*/
-        _denyBox.SetActive(false);
+
+        ClearDeny();
 
         Destroy(_currentID);
         Destroy(_currentFC);
@@ -100,17 +107,6 @@ public class GameController : MonoBehaviour
         EventBus.Trigger(EventNames.DenyHorse, this);
 
         ChooseHorse();
-    }
-
-    public void CancelDeny() 
-    {
-        /*
-        for (int i = 0; i < _reasonToggles.Length; i++)
-        {
-            _reasonToggles[i].isOn = false;
-        }
-        */
-        _denyBox.SetActive(false);
     }
 
     private void ChooseHorse()
@@ -128,5 +124,17 @@ public class GameController : MonoBehaviour
         }
 
         _currentHorse = _chosenHorse;
+    }
+
+    public void ClearDeny() 
+    {
+        for (int i = 0; i < _reasonToggles.Count; i++)
+            {
+                _reasonToggles[i].isOn = false;
+            }
+
+        _reasonToggles.Clear();
+
+        _denyBox.SetActive(false);
     }
 }
