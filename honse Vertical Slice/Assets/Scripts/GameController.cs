@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private Transform _fcSpawn;
     [SerializeField] private GameObject _fcPrefab;
     [SerializeField] private SpriteRenderer _horseSpawn;
+    [SerializeField] private Transform _horseTransform;
     [SerializeField] private horseStats[] _horseStatsList;
     [SerializeField] private GameObject _denyBox;
     
@@ -21,8 +22,11 @@ public class GameController : MonoBehaviour
     [SerializeField] private TMP_Text _rejectedFaketxt;
     [SerializeField] private TMP_Text _correctReasoningtxt;
 
+    [SerializeField] private float _lerpSpeed;
+
     public horseStats _chosenHorse;
     private horseStats _currentHorse;
+    private List<horseStats> _hasGone = new List<horseStats>();
 
     private GameObject _currentID;
     private GameObject _currentFC;
@@ -140,9 +144,16 @@ public class GameController : MonoBehaviour
         int randoNum = Random.Range(0, _horseStatsList.Length);
 
         _chosenHorse = _horseStatsList[randoNum];
+
+        if (AvailabilityCheck()) 
+        {
+            Debug.Log("GAME OVER");
+            return;
+        }
+
         if (_currentHorse != null)
         {
-            while (_chosenHorse == _currentHorse)
+            while (_hasGone.Contains(_chosenHorse))
             {
                 randoNum = Random.Range(0, _horseStatsList.Length);
                 _chosenHorse = _horseStatsList[randoNum];
@@ -150,6 +161,7 @@ public class GameController : MonoBehaviour
         }
 
         _currentHorse = _chosenHorse;
+        _hasGone.Add(_currentHorse);
     }
 
     public void ClearDeny() 
@@ -162,5 +174,33 @@ public class GameController : MonoBehaviour
         _reasonToggles.Clear();
 
         _denyBox.SetActive(false);
+    }
+
+    private bool AvailabilityCheck() 
+    {
+        foreach (horseStats horse in _horseStatsList) 
+        {
+            if (!_hasGone.Contains(horse))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public void handleLerp() 
+    {
+        _horseTransform.rotation = Quaternion.Lerp(_horseTransform.rotation, Quaternion.Euler(0,0,0), Time.deltaTime * _lerpSpeed);
+    }
+
+    private void ResetGame() 
+    {
+        _hasGone.Clear();
+        _acceptedReal = 0;
+        _acceptedFake = 0;
+        _rejectedFake = 0;
+        _rejectedReal = 0;
+
+        ChooseHorse();
     }
 }

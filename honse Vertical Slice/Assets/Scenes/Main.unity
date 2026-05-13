@@ -2615,6 +2615,7 @@ MonoBehaviour:
   _fcSpawn: {fileID: 1223980642}
   _fcPrefab: {fileID: 7842112887672593346, guid: 8d1a32632aad9f04ab5792730ce011ab, type: 3}
   _horseSpawn: {fileID: 1660077515}
+  _horseTransform: {fileID: 1660077514}
   _horseStatsList:
   - {fileID: 11400000, guid: 3793c62d2060b6144b37c0db8599ce36, type: 2}
   - {fileID: 11400000, guid: 9a95762475c53b141a9c277f23333805, type: 2}
@@ -2628,6 +2629,7 @@ MonoBehaviour:
   _rejectedRealtxt: {fileID: 51213869}
   _rejectedFaketxt: {fileID: 1115389164}
   _correctReasoningtxt: {fileID: 771140321}
+  _lerpSpeed: 3
   _chosenHorse: {fileID: 0}
 --- !u!1 &923316883
 GameObject:
