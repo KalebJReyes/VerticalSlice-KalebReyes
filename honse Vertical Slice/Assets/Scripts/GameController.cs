@@ -193,6 +193,11 @@ public class GameController : MonoBehaviour
         _horseTransform.rotation = Quaternion.Lerp(_horseTransform.rotation, Quaternion.Euler(0,0,0), Time.deltaTime * _lerpSpeed);
     }
 
+    private void endGame() 
+    {
+        
+    }
+
     private void ResetGame() 
     {
         _hasGone.Clear();
