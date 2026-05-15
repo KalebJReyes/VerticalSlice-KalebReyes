@@ -14,7 +14,34 @@ The main change to this breakdown is the addition of the horse state machine bub
 This state machine is related to the other systems of my game by calling methods from GameController and having events be fired from GameController. For example, when the player presses either the accept or deny button, the GameController script fires an event in the state machine. These events are responsible for getting the horse to move out of the scene and allow for a new horse to come in. The state machine is also responsible for changing the sprite of the horse to the correct one as the state machine calls the GameController method that changes the horse.
 
 ## Milestone 2 Devlog
-Milestone 2 Devlog goes here.
+### Prompt 1
+1. Store all of the horses that have already gone and make sure they don’t return
+- Create a new list that will store the horses that have already gone
+- After the player accepts or denies a horse, add the horse to the list
+- When choosing a new horse, check if the chosen horse is in the list. If it is, randomize again until a horse that isn’t in the list is chosen.
+2. After all of the horses have gone, show the end report
+- Before choosing a new horse, check if all of the horses are already in the list. If not, continue to choose a new horse
+- If all of the horses have gone, invoke an event that signals the end of the game
+- Make sure that a horse doesn’t enter the scene by changing the state to idle while the horse is still off screen.
+- When the end of game event is invoked, enable the game over ui box and change the text on the ui box to show how the player did.
+3. After the player presses continue, reset the game
+- After the player presses the continue button, disable the game over ui box and reset the player’s performance back to 0.
+- Clear the list of horses that have already gone
+- Choose a new horse and set the image to the new horse
+- Set the horse’s state back to isMoving and the Entering object variable to true so the horse goes back into the scene.
+
+### Prompt 2
+I think the task step break-down was mildly helpful for me. The main reasons why this breakdown wasn’t as helpful for me was because I ran into issues that I didn’t expect before and I decided to do more with the end result page that I didn’t break-down in prompt 1. I don’t think there’s really too much I can improve on for the next time I do a breakdown like this since the issues I ran into were nearly impossible to foresee. I couldn’t expect that I’d later want to lerp the end result page and consequently struggle to do so. If I were to improve my breakdowns based on the one I made for prompt 1, I would try to get a bit more specific with my steps since my steps in prompt 1 are a bit too broad and don’t exactly tell me what I need to do.
+
+### Prompt 3
+The visual scripting graph I will focus on is the transition graph from Idle to isMoving in my HorseState State graph (shown below). This graph is started with three custom events from my GameController script. These events are triggered when the player presses the accept button, deny button, or resets the game with the continue button on the end screen. These events eventually lead to triggering the transition from Idle to isMoving. Using these custom events are necessary because I need to be able to trigger the transition between idle and isMoving whenever the player presses accept or denies a horse and that isn’t possible, or at least is a lot more complicated, without the custom events. This graph also calls the DisableButtons method in the UIController script before transitioning from idle to isMoving. This is to prevent the player from being able to press the accept or deny buttons while the horse is still entering or exiting the scene.
+<img width="1919" height="1079" alt="Screenshot 2026-05-14 213937" src="https://github.com/user-attachments/assets/b4ed4c02-5707-4b1f-ad01-ce15b39e8476" />
+<img width="1919" height="1079" alt="Screenshot 2026-05-14 214151" src="https://github.com/user-attachments/assets/6110f21b-5791-4ac3-8f0d-1171be71e9f0" />
+
+
+### Prompt 4
+The Unity system I used for my game is Scriptable Objects. I used these to store each horse’s data and reference them in the IDs, food cards, the horse themselves, and whether or not they are fake.
+
 ## Milestone 3 Devlog
 Milestone 3 Devlog goes here.
 ## Milestone 4 Devlog
