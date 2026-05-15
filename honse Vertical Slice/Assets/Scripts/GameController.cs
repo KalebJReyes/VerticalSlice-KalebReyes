@@ -7,6 +7,12 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    // Events
+    public delegate void ControllerDelegate();
+    public event ControllerDelegate GameEnd;
+    public event ControllerDelegate GameReset;
+
+    // Variables
     [SerializeField] private Transform _idSpawn;
     [SerializeField] private GameObject _idSpawnPrefab;
     [SerializeField] private Transform _fcSpawn;
@@ -15,27 +21,23 @@ public class GameController : MonoBehaviour
     [SerializeField] private Transform _horseTransform;
     [SerializeField] private horseStats[] _horseStatsList;
     [SerializeField] private GameObject _denyBox;
+    [SerializeField] private UIController _uiController;
     
-    [SerializeField] private TMP_Text _acceptedRealtxt;
-    [SerializeField] private TMP_Text _acceptedFaketxt;
-    [SerializeField] private TMP_Text _rejectedRealtxt;
-    [SerializeField] private TMP_Text _rejectedFaketxt;
-    [SerializeField] private TMP_Text _correctReasoningtxt;
 
     [SerializeField] private float _lerpSpeed;
 
     public horseStats _chosenHorse;
     private horseStats _currentHorse;
-    private List<horseStats> _hasGone = new List<horseStats>();
+    public List<horseStats> _hasGone = new List<horseStats>();
 
     private GameObject _currentID;
     private GameObject _currentFC;
 
-    private int _acceptedReal;
-    private int _rejectedReal;
-    private int _acceptedFake;
-    private int _rejectedFake;
-    private int _correctReason;
+    public int _acceptedReal;
+    public int _rejectedReal;
+    public int _acceptedFake;
+    public int _rejectedFake;
+    public int _correctReason;
     
     private List<Toggle> _reasonToggles = new List<Toggle>();
     private List<Toggle> _denyReasons = new List<Toggle>();
@@ -62,25 +64,22 @@ public class GameController : MonoBehaviour
         if (_chosenHorse.Real)
         {
             _acceptedReal++;
-            _acceptedRealtxt.text = "Real Accepted: " + _acceptedReal;
         }
         else 
         {
             _acceptedFake++;
-            _acceptedFaketxt.text = "Fake Accepted: " + _acceptedFake;
         }
 
         EventBus.Trigger(EventNames.AcceptHorse, this);
 
         Destroy(_currentID);
         Destroy(_currentFC);
-
-        ChooseHorse();
     }
 
     public void Deny() 
     {
         _denyBox.SetActive(true);
+        _uiController.DisableButtons();
 
         foreach (Transform item in _denyBox.transform)
         {
@@ -98,12 +97,10 @@ public class GameController : MonoBehaviour
         if (!_chosenHorse.Real)
         {
             _rejectedFake++;
-            _rejectedFaketxt.text = "Fake Rejected: " + _rejectedFake;
         }
         else
         {
             _rejectedReal++;
-            _rejectedRealtxt.text = "Real Rejected: " + _rejectedReal;
         }
 
         foreach (Toggle item in _reasonToggles)
@@ -124,7 +121,6 @@ public class GameController : MonoBehaviour
             if (reason == _currentHorse.fakeReason) 
             {
                 _correctReason++;
-                _correctReasoningtxt.text = "Correct Reasoning: " + _correctReason;
             }
         }
 
@@ -135,11 +131,9 @@ public class GameController : MonoBehaviour
         Destroy(_currentFC);
 
         EventBus.Trigger(EventNames.DenyHorse, this);
-
-        ChooseHorse();
     }
 
-    private void ChooseHorse()
+    public void ChooseHorse()
     {
         int randoNum = Random.Range(0, _horseStatsList.Length);
 
@@ -172,11 +166,12 @@ public class GameController : MonoBehaviour
             }
 
         _reasonToggles.Clear();
+        _uiController.EnableButtons();
 
         _denyBox.SetActive(false);
     }
 
-    private bool AvailabilityCheck() 
+    public bool AvailabilityCheck() 
     {
         foreach (horseStats horse in _horseStatsList) 
         {
@@ -193,19 +188,23 @@ public class GameController : MonoBehaviour
         _horseTransform.rotation = Quaternion.Lerp(_horseTransform.rotation, Quaternion.Euler(0,0,0), Time.deltaTime * _lerpSpeed);
     }
 
-    private void endGame() 
+    public void endGame() 
     {
-        
+        GameEnd?.Invoke();
     }
 
-    private void ResetGame() 
+    public void ResetGame() 
     {
         _hasGone.Clear();
         _acceptedReal = 0;
         _acceptedFake = 0;
         _rejectedFake = 0;
         _rejectedReal = 0;
+        _correctReason = 0;
 
         ChooseHorse();
+        SpawnHorse();
+        GameReset?.Invoke();
+        EventBus.Trigger(EventNames.ResetGame, this);
     }
 }
