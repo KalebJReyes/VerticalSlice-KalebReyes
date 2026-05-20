@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f766221089b4f34b94ee29716516700, type: 3}
+  m_Name: UniDialogue
+  m_EditorClassIdentifier: 
+  enteringDialogue:
+  - I'm going to win this for the folks back home... But first, sustenance.
+  - Rice only brings misfortune to everyone... I really... really hope I can change
+    that!
+  - For a better trip, thorough preparation is all but mandatory. Let us proceed
+    with the utmost caution and care.
+  - I looove humans! Let's get along and be great buddies!
+  - "What I'm after is the maximum speed. I'll be faster than anyone\u2014faster
+    than a deer, or even a pronghorn!"
+  - Wahey! Your vibes are off the charts! Let's party and have some fun!
+  - Money! Fame! Desire! Once I have it all, I'll dance and laugh my way through
+    life!
+  - This rotation's kinda like an investment, y'know? Bit of a self-branding.
+  - I won't let losing get me down! Urara, la la la!
+  - Come now, eat up! I promise you it's very buono!
+  - Follow my lead. I'll show ya who's the 'strongest'!
+  - I'll give it a go! You'll never know unless you try, right?
+  - The world is just oh-so marvelous! It falls to me to make it even more MAAAAARVELOUS!
+  - 'Oho, what''s this I see? Today''s divination: great fortune!'
+  - Y'know, I kinda get the feeling I can really do it this time!
+  - No problems pecs can't solve! Let's get swole together!
+  - I'll show them! I can win... I know it!
+  - All flowers want to be by someone's side. Even the smallest, quietest one of
+    them all.
+  - I recommend.... this style! It'll make you shine the brightest of them all
+  - "Diligence is key\u2014just like when in spring, cherry blossoms bloom... Ooh,
+    that's a good one!"
+  - No matter how harsh the winters can hurt. The cherry blossoms will always bloom,
+    some day, for sure!
+  - What happens if I'm in a pinch? That's okay, I just get fired up. I'll be sure
+    to turn fate upside down!
+  - Everyone believes in my ability to win. I shall shine on like a brilliant diamond
+    for them!
+  - The world is brimming with possibility! It's like an oyster that bore a pearl
+    such as me!
+  - Hey now, why don't we take it easy? Tortoise and the hare and all that.
+  - I can spoil you as much as you'd like. Aww, there, there.
+  - Haaah ha ha ha! I am the star of this play, and it shall be known the world over
+    as a masterpiece!
+  - Debt can't keep me down! I'm the White Lightning of Naniwa!
+  - I've just gotta be the coolest to ever do it!
+  - I will ignite my soul to burn, and run as a gust.
+  - To be the hero of a story one day.... everyone longs to be one if they'd really
+    like to.

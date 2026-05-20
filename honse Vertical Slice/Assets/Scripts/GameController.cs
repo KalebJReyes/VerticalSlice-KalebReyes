@@ -22,8 +22,10 @@ public class GameController : MonoBehaviour
     [SerializeField] private horseStats[] _horseStatsList;
     [SerializeField] private GameObject _denyBox;
     [SerializeField] private UIController _uiController;
+    [SerializeField] private UniversalDialogue _universalDialogue;
+    [SerializeField] private TMP_Text _horseTranslator;
+    [SerializeField] private GameObject _referenceSheet;
     
-
     [SerializeField] private float _lerpSpeed;
 
     public horseStats _chosenHorse;
@@ -183,6 +185,35 @@ public class GameController : MonoBehaviour
         return true;
     }
 
+    public void EnteringDialogue() 
+    {
+        string randomdialogue = _universalDialogue.enteringDialogue[Random.Range(0, _universalDialogue.enteringDialogue.Length)];
+
+        _horseTranslator.text = randomdialogue;
+    }
+
+    public void ResetDialogue() 
+    {
+        _horseTranslator.text = "- Waiting for Input -";
+    }
+
+    public void ToggleReference() 
+    {
+        if (_referenceSheet.activeInHierarchy)
+        {
+            _referenceSheet.SetActive(false);
+        }
+        else 
+        {
+            _referenceSheet.SetActive(true);
+        }
+    }
+
+    public void DisableReference() 
+    {
+        _referenceSheet.SetActive(false);
+    }
+
     public void handleLerp() 
     {
         _horseTransform.rotation = Quaternion.Lerp(_horseTransform.rotation, Quaternion.Euler(0,0,0), Time.deltaTime * _lerpSpeed);
@@ -190,6 +221,7 @@ public class GameController : MonoBehaviour
 
     public void endGame() 
     {
+        DisableReference();
         GameEnd?.Invoke();
     }
 
