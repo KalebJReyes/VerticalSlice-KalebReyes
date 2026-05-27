@@ -451,7 +451,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 53.4, y: 68.304}
+  m_AnchoredPosition: {x: 53.399994, y: 68.304}
   m_SizeDelta: {x: 81.7873, y: 112.7513}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &64066265
@@ -1548,7 +1548,7 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras: []
-  m_RendererIndex: -1
+  m_RendererIndex: 0
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1
@@ -3821,6 +3821,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6543a85e8ef510b4b9cd89c183a13b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _mainCamera: {fileID: 519420028}
+  _cameraData: {fileID: 519420030}
   _idSpawn: {fileID: 712022455}
   _idSpawnPrefab: {fileID: 4521513620306395666, guid: 4fff5606506ef08469635932985f133e, type: 3}
   _fcSpawn: {fileID: 1223980642}
@@ -5151,8 +5153,8 @@ Canvas:
   m_GameObject: {fileID: 1186315108}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -5163,7 +5165,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!224 &1186315112
 RectTransform:

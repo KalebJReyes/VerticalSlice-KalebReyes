@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
@@ -13,6 +14,8 @@ public class GameController : MonoBehaviour
     public event ControllerDelegate GameReset;
 
     // Variables
+    [SerializeField] private GameObject _mainCamera;
+    [SerializeField] private UniversalAdditionalCameraData _cameraData;
     [SerializeField] private Transform _idSpawn;
     [SerializeField] private GameObject _idSpawnPrefab;
     [SerializeField] private Transform _fcSpawn;
@@ -126,6 +129,8 @@ public class GameController : MonoBehaviour
             }
         }
 
+        _cameraData.SetRenderer(1);
+
         _denyReasons.Clear();
         ClearDeny();
 
@@ -137,6 +142,8 @@ public class GameController : MonoBehaviour
 
     public void ChooseHorse()
     {
+        _cameraData.SetRenderer(0);
+
         int randoNum = Random.Range(0, _horseStatsList.Length);
 
         _chosenHorse = _horseStatsList[randoNum];
