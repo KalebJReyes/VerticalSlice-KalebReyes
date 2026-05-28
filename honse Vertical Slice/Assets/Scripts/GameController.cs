@@ -75,6 +75,8 @@ public class GameController : MonoBehaviour
             _acceptedFake++;
         }
 
+        _cameraData.SetRenderer(2);
+
         EventBus.Trigger(EventNames.AcceptHorse, this);
 
         Destroy(_currentID);
