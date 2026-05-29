@@ -27,9 +27,5 @@ public class horseStats : ScriptableObject
 
     // Real Horse Values
     public Sprite Honse;
-    /*
-    public string honseCoatCol;
-    public string honseManeCol;
-    public string honsePattern;
-    */
+    public string Name;
 }

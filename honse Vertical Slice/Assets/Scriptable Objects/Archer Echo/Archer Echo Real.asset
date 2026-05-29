@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d56a326f0442048b44c32de59a7b9d, type: 3}
+  m_Name: Archer Echo Real
+  m_EditorClassIdentifier: 
+  Real: 1
+  fakeReason: None
+  idName: Archer Echo
+  idPhoto: {fileID: 21300000, guid: 44bc81e2c41b36547b887cb838262ba5, type: 3}
+  idDOB: March 22, 2019
+  idCoatCol: White
+  idManeCol: White
+  idPattern: None
+  fcName: Archer Echo
+  fcDob: March 22, 2019
+  fcPhoto: {fileID: 21300000, guid: 44bc81e2c41b36547b887cb838262ba5, type: 3}
+  stableSignature: {fileID: 21300000, guid: 1e8f19f7534cffb4dbd1dda798d7a2f2, type: 3}
+  fcIdnum: 032216AE937
+  Funds: 119417
+  giveFunds: 0
+  Honse: {fileID: 21300000, guid: ca94ce4445a992248affa38f1ccdbf7f, type: 3}
+  Name: Archer Echo

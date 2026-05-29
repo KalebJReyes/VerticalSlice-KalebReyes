@@ -10,21 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90d56a326f0442048b44c32de59a7b9d, type: 3}
-  m_Name: Topaz Scarlet Stats
+  m_Name: Bramble Steele Real
   m_EditorClassIdentifier: 
   Real: 1
   fakeReason: None
-  idName: Topaz Scarlet
-  idPhoto: {fileID: 21300000, guid: a36cc749c290b694a95eb8a1a218d712, type: 3}
-  idDOB: August 19, 2019
-  idCoatCol: Brown
-  idManeCol: Apricot
-  idPattern: White Blaze
-  fcName: Topaz Scarlet
-  fcDob: August 19, 2019
-  fcPhoto: {fileID: 21300000, guid: a36cc749c290b694a95eb8a1a218d712, type: 3}
+  idName: Bramble Steele
+  idPhoto: {fileID: 21300000, guid: 9b378f0ca05020d44970b6cab65ea8be, type: 3}
+  idDOB: June 18, 2017
+  idCoatCol: White & Grey
+  idManeCol: Grey
+  idPattern: Grey star & patches
+  fcName: Bramble Steele
+  fcDob: June 18, 2017
+  fcPhoto: {fileID: 21300000, guid: 9b378f0ca05020d44970b6cab65ea8be, type: 3}
   stableSignature: {fileID: 21300000, guid: 1e8f19f7534cffb4dbd1dda798d7a2f2, type: 3}
-  fcIdnum: 081919TS376
-  Funds: 773977
+  fcIdnum: 061817BS027
+  Funds: 708568
   giveFunds: 0
-  Honse: {fileID: 21300000, guid: 0f59899155bb5a14dbfea9b085ae93f9, type: 3}
+  Honse: {fileID: 21300000, guid: 712591c64d019f4489e44f7ed19dd90c, type: 3}
+  Name: Bramble Steele

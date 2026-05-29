@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+    [SerializeField] private UniversalAdditionalCameraData _cameraData;
     [SerializeField] private Button _acceptButton;
     [SerializeField] private Button _denyButton;
     [SerializeField] private GameObject _screenDarken;
@@ -20,6 +22,10 @@ public class UIController : MonoBehaviour
     [SerializeField] private TMP_Text _reasoningtxt;
     [SerializeField] private TMP_Text _accuracytxt;
     [SerializeField] private TMP_Text _scoretxt;
+
+    [SerializeField] private Image _lightIndicator;
+    [SerializeField] private GameObject _arrow;
+    [SerializeField] private GameObject _lightText;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +44,21 @@ public class UIController : MonoBehaviour
     {
         _acceptButton.interactable = false;
         _denyButton.interactable = false;
+    }
+
+    public void SetLight(Color color) 
+    {
+        _lightIndicator.color = color;
+        _arrow.SetActive(true);
+        _lightText.SetActive(true);
+    }
+
+    public void LightOff() 
+    {
+        _cameraData.SetRenderer(0);
+        _lightIndicator.color = Color.white;
+        _arrow.SetActive(false);
+        _lightText.SetActive(false);
     }
 
     public void DarkenScreen() 

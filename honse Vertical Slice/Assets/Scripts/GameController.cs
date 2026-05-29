@@ -33,7 +33,7 @@ public class GameController : MonoBehaviour
 
     public horseStats _chosenHorse;
     private horseStats _currentHorse;
-    public List<horseStats> _hasGone = new List<horseStats>();
+    public List<string> _hasGone = new List<string>();
 
     private GameObject _currentID;
     private GameObject _currentFC;
@@ -76,6 +76,7 @@ public class GameController : MonoBehaviour
         }
 
         _cameraData.SetRenderer(2);
+        _uiController.SetLight(Color.green);
 
         EventBus.Trigger(EventNames.AcceptHorse, this);
 
@@ -132,6 +133,7 @@ public class GameController : MonoBehaviour
         }
 
         _cameraData.SetRenderer(1);
+        _uiController.SetLight(Color.red);
 
         _denyReasons.Clear();
         ClearDeny();
@@ -144,7 +146,7 @@ public class GameController : MonoBehaviour
 
     public void ChooseHorse()
     {
-        _cameraData.SetRenderer(0);
+        //_cameraData.SetRenderer(0);
 
         int randoNum = Random.Range(0, _horseStatsList.Length);
 
@@ -158,7 +160,7 @@ public class GameController : MonoBehaviour
 
         if (_currentHorse != null)
         {
-            while (_hasGone.Contains(_chosenHorse))
+            while (_hasGone.Contains(_chosenHorse.Name))
             {
                 randoNum = Random.Range(0, _horseStatsList.Length);
                 _chosenHorse = _horseStatsList[randoNum];
@@ -166,7 +168,7 @@ public class GameController : MonoBehaviour
         }
 
         _currentHorse = _chosenHorse;
-        _hasGone.Add(_currentHorse);
+        _hasGone.Add(_currentHorse.Name);
     }
 
     public void ClearDeny() 
@@ -186,7 +188,7 @@ public class GameController : MonoBehaviour
     {
         foreach (horseStats horse in _horseStatsList) 
         {
-            if (!_hasGone.Contains(horse))
+            if (!_hasGone.Contains(horse.Name))
             {
                 return false;
             }

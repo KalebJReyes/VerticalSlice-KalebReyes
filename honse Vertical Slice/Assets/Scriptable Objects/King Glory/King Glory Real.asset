@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d56a326f0442048b44c32de59a7b9d, type: 3}
+  m_Name: King Glory Real
+  m_EditorClassIdentifier: 
+  Real: 1
+  fakeReason: None
+  idName: King Glory
+  idPhoto: {fileID: 21300000, guid: 09a5f126177007c4cbaaae22685a9e66, type: 3}
+  idDOB: April 11, 2016
+  idCoatCol: Black
+  idManeCol: Black
+  idPattern: White Patches
+  fcName: King Glory
+  fcDob: April 11, 2016
+  fcPhoto: {fileID: 21300000, guid: 09a5f126177007c4cbaaae22685a9e66, type: 3}
+  stableSignature: {fileID: 21300000, guid: 1e8f19f7534cffb4dbd1dda798d7a2f2, type: 3}
+  fcIdnum: 041116KG748
+  Funds: 695635
+  giveFunds: 0
+  Honse: {fileID: 21300000, guid: a23e3f84a7e4a544bbb269ea1781ece9, type: 3}
+  Name: King Glory

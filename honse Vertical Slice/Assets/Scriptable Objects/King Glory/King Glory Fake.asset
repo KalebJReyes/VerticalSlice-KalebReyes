@@ -10,21 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90d56a326f0442048b44c32de59a7b9d, type: 3}
-  m_Name: Loki Sky Stats
+  m_Name: King Glory Fake
   m_EditorClassIdentifier: 
   Real: 0
-  fakeReason: Names don't match
-  idName: Loki Sky
-  idPhoto: {fileID: 21300000, guid: 91e0bfbf7b02ee34cb069ad84460fa2a, type: 3}
-  idDOB: January 17, 2014
-  idCoatCol: Chestnut
+  fakeReason: Incorrect ID number
+  idName: King Glory
+  idPhoto: {fileID: 21300000, guid: 09a5f126177007c4cbaaae22685a9e66, type: 3}
+  idDOB: April 11, 2016
+  idCoatCol: Black
   idManeCol: Black
-  idPattern: Star
-  fcName: Lowk Sky
-  fcDob: January 17, 2014
-  fcPhoto: {fileID: 21300000, guid: 91e0bfbf7b02ee34cb069ad84460fa2a, type: 3}
+  idPattern: White Patches
+  fcName: King Glory
+  fcDob: April 11, 2016
+  fcPhoto: {fileID: 21300000, guid: 09a5f126177007c4cbaaae22685a9e66, type: 3}
   stableSignature: {fileID: 21300000, guid: 1e8f19f7534cffb4dbd1dda798d7a2f2, type: 3}
-  fcIdnum: 011714LS784
-  Funds: 740819
+  fcIdnum: 053697KG937
+  Funds: 695635
   giveFunds: 0
-  Honse: {fileID: 21300000, guid: b747e26a6bc50444685d0b7be12fe080, type: 3}
+  Honse: {fileID: 21300000, guid: a23e3f84a7e4a544bbb269ea1781ece9, type: 3}
+  Name: King Glory
