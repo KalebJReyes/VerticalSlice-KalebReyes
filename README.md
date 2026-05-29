@@ -40,10 +40,19 @@ The visual scripting graph I will focus on is the transition graph from Idle to 
 
 
 ### Prompt 4
-The Unity system I used for my game is Scriptable Objects. I used these to store each horse’s data and reference them in the IDs, food cards, the horse themselves, and whether or not they are fake.
+The Unity system I used for my game is Scriptable Objects. I used these to store each horse’s data and reference them in the IDs, food cards, the horse themselves, and whether or not they are fake. 
 
 ## Milestone 3 Devlog
-Milestone 3 Devlog goes here.
+### Prompt 1
+<img width="1917" height="1015" alt="Screenshot 2026-05-28 225913" src="https://github.com/user-attachments/assets/d487ee5c-596f-4922-808b-0eb710549c63" />
+This ShaderGraph is for a full screen post processing effect and is one of two effects I added. These effects are very similar with only a few values being different. This effect has the screen go back and forth between slightly red to red. In the ShaderGraph above, I have a URP Sample Buffer node with the Source Buffer as BlitSource so that I can sample the Color Buffer of my game. The output of this node is then multiplied by a Color property with the default color value being the color I want the screen to flash, in this case red. Since I want the screen to oscillate from slightly red to completely red, I connected the output if my URP Sample Buffer node and Multiply node to the A and B inputs of a Lerp Node. For the Lerp value, I used the formula (sin(3 * Time()) + 9)/10. This makes a sine wave that oscillates between 0.8 and 1 with multiplying Time() by 3 making the oscillation happen faster. The Lerp node output is connected to the Base Color input of the Fragment shader which then applies our effect to the screen.
+
+### Prompt 2
+The only substantial note from my playtesting that I noticed was that the reference sheet wasn't used despite it being there. It wasn't clear if the playtester didn't notice the button or the reference sheet was just not needed but I tried to address both things. I didn't want to move the button because I thought it wouldn't look that good in other places so I just added "Click to" to make it more clear that the box is a button. I also added more fake horses with reasoning only obtainable through knowledge of horses or the reference sheet. My hope is that this makes it more desirable to have and open the reference sheet.
+
+### Prompt 3
+Since the last milestone, I added functionality to the horse translator as well as multiple dialogue lines to put on the translator when a horse enters. I also added the opposite version of each horse, or a fake version of a real horse and vice versa, so players can't just memorize which horses are fake and which are real. To accommodate the new versions, the logic for choosing horses was also changed.
+
 ## Milestone 4 Devlog
 Milestone 4 Devlog goes here.
 ## Final Devlog
