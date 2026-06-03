@@ -61,6 +61,7 @@ Final Devlog goes here.
 - [Table Surface Stock Image](https://unsplash.com/photos/a-close-up-of-a-wood-grain-surface-RiwLW247fpU) - Table surface photo
 - [Wood Wall Stock Image](https://unsplash.com/photos/close-up-photo-of-wooden-panel-1Bg9Wlq3wXk) - Wall background photo
 - [Desk Stock Image](https://unsplash.com/photos/gray-balanced-arm-lamp-on-brown-wooden-table-3A4XZUopCJA) - Desk photo
+- [Speech Bubble Sprite](https://assetstore.unity.com/packages/2d/gui/speech-bubble-322411) - Speech Bubble sprite
 - [Horse Stock Image 1](https://unsplash.com/photos/brown-horse-with-silver-round-pendant-necklace-Olt577JtPM0) - Loki Sky's photo
 - [Horse Stock Image 2](https://unsplash.com/photos/brown-horse-with-white-hair-WWcFgaG6ZOo) - Enya Wals photo
 - [Horse Stock Image 3](https://unsplash.com/photos/bokeh-photography-of-a-black-horse-6OdJ4qIwL0s) - King Glory's photo
