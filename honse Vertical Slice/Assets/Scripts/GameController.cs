@@ -28,6 +28,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private UniversalDialogue _universalDialogue;
     [SerializeField] private TMP_Text _horseTranslator;
     [SerializeField] private GameObject _referenceSheet;
+    [SerializeField] private GameObject _referenceButton;
     
     [SerializeField] private float _lerpSpeed;
 
@@ -208,16 +209,16 @@ public class GameController : MonoBehaviour
         _horseTranslator.text = "- Waiting for Input -";
     }
 
-    public void ToggleReference() 
+    public void ShowReference() 
     {
-        if (_referenceSheet.activeInHierarchy)
-        {
-            _referenceSheet.SetActive(false);
-        }
-        else 
-        {
-            _referenceSheet.SetActive(true);
-        }
+        _referenceSheet.SetActive(true);
+        _referenceButton.SetActive(false);
+    }
+
+    public void HideReference() 
+    {
+        _referenceSheet.SetActive(false);
+        _referenceButton.SetActive(true);
     }
 
     public void DisableReference() 
