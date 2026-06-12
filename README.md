@@ -53,10 +53,29 @@ The only substantial note from my playtesting that I noticed was that the refere
 ### Prompt 3
 Since the last milestone, I added functionality to the horse translator as well as multiple dialogue lines to put on the translator when a horse enters. I also added the opposite version of each horse, or a fake version of a real horse and vice versa, so players can't just memorize which horses are fake and which are real. To accommodate the new versions, the logic for choosing horses was also changed.
 
-## Milestone 4 Devlog
-Milestone 4 Devlog goes here.
 ## Final Devlog
-Final Devlog goes here.
+### Prompt 1
+The core gameplay loop of my game is looking at horses' ID and food card and looking for errors to determine if they are real or fake. The game shows 6 different horses before moving to the end result screen. The vertical slice contains 6 different horses with each horse having a real and fake version. Each fake has a different reasoning for being fake. This vertical slice gives the player an idea of what the full game may look like as it contains the main gameplay loop and enough content to get a good look at what the gameplay is like. More specifically, the main gameplay loop of the full game would be inspecting the horses' IDs and food cards to find discrepencies. My vertical slice is able to fulfill this gameplay loop while having the minimal amounts of horses needed.
+
+### Prompt 2
+My rendering effects are activated when you press either the accept button or confirm your denial by pressing the confirm button in the deny reason box. When you press the accept button, the screen starts flashing green. When you confirm your denial, the screen starts flashing red. Both effects are disabled when the horse has reached a certain point to the left or right, depending on what button was pressed. 
+<img width="541" height="380" alt="Screenshot 2026-06-11 222414" src="https://github.com/user-attachments/assets/287a2939-c8a2-4fe6-899e-33557d31dc34" />
+<img width="530" height="242" alt="Screenshot 2026-06-11 222353" src="https://github.com/user-attachments/assets/4711cb75-0e95-4482-9d84-624f8c88f485" />
+
+Above shows how I activate my effect in both cases. Both of these are activated within my GameController script with the top photo showing my Accept function and the bottom photo showing my ConfirmDeny function. The code that activates both effect is simply the _cameraData.SetRenderer(); line. This line of code changes the renderer that the main camera is using to the renderer with the index between the parentheses. _cameraData is a UniversalAdditionalCameraData, a script that is attached to the main camera, which can control what index renderer the main camera is using. In this case, the standard screen with no flashing lights is on index 0, the flashing red renderer is on index 1, and the flashing green renderer is on index 2.
+
+### Prompt 3
+While I don't currently have a plan for tackling large projects, I can think of a viable plan that I can possibly use in the future. After coming up with the general idea of a game, I can breakdown the game into the different features, mechanics, content, and aesthetics I have in mind. I can further breakdown the game by creating a bubble diagram, the same one as the ones we've done for this quarter and project, of the different game objects and how they interact with eachother. After breaking down my idea, I can create specific tasks of what needs to be done to create this game. These tasks could be as simple as "make basic movement". Additionally, I could organize the tasks based on how important it is to the core gameplay loop. Things like movement, player actions, and basic NPCs are more likely to be crucial to the core gameplay loop while things like graphics, audio, and special effects aren't as crucial and can be added way later. These tasks can then be divided into sprints which is a group of tasks that need to be done before moving on to the next sprint. Using sprints can also be helpful if you are making a game with a time restriction or struggle with procrastination as you can set when you want these sprints to be completed by. Personally, I don't think breaking down the tasks themselves would be very useful for me since I can't truly get a grasp on how to do a task until I'm already doing it. To me, breaking down the tasks feels like more trouble than it's worth. After this planning, I would start working on the project. As I'm working on the project, I would mark the tasks as I finish them and see if my pace matches with the sprints I set up and adjust accordingly. To summarize, my plan looks like this:
+
+- Think of an idea for a game
+- Breakdown the idea into its features, mechanics, content, and aesthetic
+- create a bubble diagram
+- Make specific tasks of what needs to be made
+- Organize the tasks based on importance to the main gameplay loop
+- Divide tasks into sprints 
+
+Doing this process will help me better understand the true scope of my ideas as the breakdowns and tasks lets me see visually how much I would need to do. Just the idea in my head alone won't let me understand the scope as I am more likely to misjudge how simple or complex something may be. An idea may seem pretty simple in my head but can actually be more complex after seeing how many tasks I need to get done. This plan is a mix of two projects I worked on this quarter; this project and Bermuda Rectangle which was a pitch project. Both breakdown processes come from this project while the task ideas mostly from my experience working on Bermuda Rectangle. While working on this vertical slice, I didn't keep a task list of what I still needed to get done. As a result, I found myself often forgetting about things I needed to make. Luckily I mostly remembered what I was forgetting but just forgetting alone is a big risk. Hopefully in the future, I can use this planning process, or something similar, to help make larger scale projects easier.
+
 ## Open-source assets
 - [Table Surface Stock Image](https://unsplash.com/photos/a-close-up-of-a-wood-grain-surface-RiwLW247fpU) - Table surface photo
 - [Wood Wall Stock Image](https://unsplash.com/photos/close-up-photo-of-wooden-panel-1Bg9Wlq3wXk) - Wall background photo
