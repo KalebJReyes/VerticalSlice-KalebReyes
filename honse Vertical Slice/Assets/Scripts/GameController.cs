@@ -29,7 +29,12 @@ public class GameController : MonoBehaviour
     [SerializeField] private TMP_Text _horseTranslator;
     [SerializeField] private GameObject _referenceSheet;
     [SerializeField] private GameObject _referenceButton;
-    
+
+    // Audio Variables
+    [SerializeField] private AudioSource _acceptAudio;
+    [SerializeField] private AudioSource _denyAudio;
+    [SerializeField] private AudioSource _referenceClose;
+
     [SerializeField] private float _lerpSpeed;
 
     public horseStats _chosenHorse;
@@ -78,6 +83,8 @@ public class GameController : MonoBehaviour
 
         _cameraData.SetRenderer(2);
         _uiController.SetLight(Color.green);
+
+        _acceptAudio.Play();
 
         EventBus.Trigger(EventNames.AcceptHorse, this);
 
@@ -136,6 +143,8 @@ public class GameController : MonoBehaviour
         _cameraData.SetRenderer(1);
         _uiController.SetLight(Color.red);
 
+        _denyAudio.Play();
+
         _denyReasons.Clear();
         ClearDeny();
 
@@ -148,6 +157,9 @@ public class GameController : MonoBehaviour
     public void ChooseHorse()
     {
         //_cameraData.SetRenderer(0);
+
+        _denyAudio.Stop();
+        _acceptAudio.Stop();
 
         int randoNum = Random.Range(0, _horseStatsList.Length);
 
@@ -219,6 +231,7 @@ public class GameController : MonoBehaviour
     {
         _referenceSheet.SetActive(false);
         _referenceButton.SetActive(true);
+        _referenceClose.Play();
     }
 
     public void DisableReference() 
