@@ -117,7 +117,7 @@ public class UIController : MonoBehaviour
         while (time < 1) 
         {
             _darkenImage.color = Color.Lerp(_darkenImage.color, Color.clear, time);
-            _gameoverBox.localPosition = Vector3.Lerp(_gameoverBox.localPosition, new Vector3(0, -630, 0), time);
+            _gameoverBox.localPosition = Vector3.Lerp(_gameoverBox.localPosition, new Vector3(0, -680, 0), time);
             time += Time.deltaTime * _reportSpeed;
 
             yield return null;

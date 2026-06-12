@@ -216,6 +216,20 @@ public class GameController : MonoBehaviour
         _horseTranslator.text = randomdialogue;
     }
 
+    public void AcceptDialogue()
+    {
+        string randomdialogue = _universalDialogue.acceptDialogue[Random.Range(0, _universalDialogue.acceptDialogue.Length)];
+
+        _horseTranslator.text = randomdialogue;
+    }
+
+    public void DenyDialogue()
+    {
+        string randomdialogue = _universalDialogue.rejectDialogue[Random.Range(0, _universalDialogue.rejectDialogue.Length)];
+
+        _horseTranslator.text = randomdialogue;
+    }
+
     public void ResetDialogue() 
     {
         _horseTranslator.text = "- Waiting for Input -";
@@ -247,6 +261,8 @@ public class GameController : MonoBehaviour
     public void endGame() 
     {
         DisableReference();
+        _denyAudio.Stop();
+        _acceptAudio.Stop();
         GameEnd?.Invoke();
     }
 

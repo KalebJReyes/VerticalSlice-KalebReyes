@@ -7,4 +7,6 @@ using UnityEngine;
 public class UniversalDialogue : ScriptableObject
 {
     public string[] enteringDialogue;
+    public string[] acceptDialogue;
+    public string[] rejectDialogue;
 }

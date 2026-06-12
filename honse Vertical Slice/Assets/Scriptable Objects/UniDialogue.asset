@@ -56,3 +56,29 @@ MonoBehaviour:
   - I will ignite my soul to burn, and run as a gust.
   - To be the hero of a story one day.... everyone longs to be one if they'd really
     like to.
+  acceptDialogue:
+  - Good. Now bow down and worship my supremacy.
+  - Blessings upon you, and radiance upon the 'world'...
+  - Uwaaagh! That was sooo touching!
+  - "Whoa! Now that\u2019s more like it! Good fortune doesn\u2019t just come to those
+    who wait around doing nothing!"
+  - Yippee!
+  - "I\u2019m so hungry, I could eat a horse\u2026 wait\u2026"
+  - Insooth! Justice always prevails!
+  - "Woo! Yeah baby! That's what I've been waiting for. That\u2019s what it's all
+    about."
+  - "Wow. I\u2019m so happy. Just as happy as I am playing Umamusume: Pretty Derby
+    on my mobile and PC devices "
+  - "You\u2019re so awesome and cool random person I don\u2019t know"
+  rejectDialogue:
+  - ROAR! Look away from me and I'll bite you!
+  - "C\u2019mon man, I\u2019m so hungy\u2026"
+  - "Man\u2026"
+  - Ah shit
+  - '*sequence of progressively more offensive phrases* '
+  - I always come back
+  - For real?!
+  - If I find you out in the open, I will find a way to drop kick you
+  - Why? Everything should be perfect.
+  - 'Neigh, thou must have err''d indeed. I swear''d most solemnly that mine own
+    documents were in order still. '
