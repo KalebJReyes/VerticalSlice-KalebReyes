@@ -68,3 +68,10 @@ Final Devlog goes here.
 - [Horse Stock Image 4](https://unsplash.com/photos/white-horse-standing-near-plant-RoTyXO1m0wo) - Archer Echo's photo
 - [Horse Stock Image 5](https://unsplash.com/photos/close-up-photography-of-white-and-gray-horse-standing-on-green-grass-field--Ylz_tc8NOk) - Bramble Steele's photo
 - [Horse Stock Image 6](https://unsplash.com/photos/brown-and-white-horse-0F9oVQ3x2ak) - Topaz Scarlet's photo
+- [Accept SFX](https://freesound.org/people/Timbre/sounds/110317/) - Accepting horse Sound Effect
+- [Deny SFX](https://freesound.org/people/onderwish/sounds/470504/) - Denying horse Sound Effect
+- [Ambience 1](https://freesound.org/people/Kyster/sounds/120905/?) - 1 layer of the background sounds
+- [Ambience 2](https://freesound.org/people/WolfOWI/sounds/588299/) - 1 layer of the background sounds
+- [Horse Sounds](https://freesound.org/people/3bagbrew/sounds/59569/) - All 3 horse sound effects
+- [Gallop SFX](https://freesound.org/people/prosounder/sounds/32679/) - Moving horse sound effect
+- [Page Turn SFX](https://freesound.org/people/flag2/sounds/63318/) - Opening and closing reference sheet sound effect
